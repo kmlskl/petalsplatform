@@ -1,0 +1,33 @@
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: -0.4rem;
+  justify-items: center;
+  align-items: center;
+  transform: scale(0.8) translateZ(0);
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  gap: .8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-container img {
+  width: 2.4rem;
+}
+
+.true {
+  grid-area: true;
+}
+
+.false {
+  grid-area: false;
+}
+
+.knob-container {
+  grid-area: knob;
+}
+

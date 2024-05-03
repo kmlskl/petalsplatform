@@ -1,0 +1,76 @@
+.card {
+  /* position: relative; */
+  flex-basis: var(--size-content-1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+  /* background: white; */
+  /* border: 1px solid var(--stone-10); */
+  padding: var(--size-4);
+  border-radius: var(--radius-3);
+  /* box-shadow: var(--shadow-2); */
+  align-items: center;
+}
+
+.card > p {
+  align-self: flex-end;
+  transform: translate(10%, -50%);
+}
+
+.cardHeader {
+  height: 120px;
+}
+
+.title {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-4);
+  line-height: var(--font-lineheight-1);
+}
+
+p {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.bolditalic {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.img {
+  object-fit: contain;
+  aspect-ratio: var(--ratio-widescreen);
+}
+
+.svgPreview {
+  display: flex;
+  justify-content: center;
+  max-width: fit-content;
+  scale: 0.24;
+  transform-origin: top center;
+}
+
+.svgPreview > svg {
+  display: flex;
+  width: auto;
+  height: auto;
+  min-width: fit-content;
+}
+
+.albert-sans-bolditalic {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.albert-sans-bolditalic {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+}

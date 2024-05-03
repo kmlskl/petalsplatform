@@ -1,0 +1,21 @@
+.object-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.8rem;
+  transition: all 1s;
+}
+
+@media screen and (max-width: 480px) {
+  .object-controls {
+    overflow-x: scroll;
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    justify-content: flex-start;
+    border-radius: 0;
+    padding: 1rem;
+  }
+}

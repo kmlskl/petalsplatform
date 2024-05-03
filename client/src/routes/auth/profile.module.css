@@ -1,0 +1,65 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4);
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  padding-left: var(--size-8);
+  padding-right: var(--size-8);
+  align-items: flex-start;
+}
+
+.ownerInfo,
+h3 {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.bolditalic {
+  font-weight: 600;
+  font-style: italic;
+}
+
+h3 {
+  display: flex;
+  font-weight: 600;
+  align-items: flex-start;
+}
+
+.ownerInfo,
+.myInfo {
+  padding-left: var(--size-8);
+  padding-right: var(--size-8);
+}
+
+.myInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+  margin-block: 0;
+  margin-inline: 0;
+  align-items: flex-start;
+}
+
+.myInfo > dd > form > button {
+  color: var(--stone-10);
+  text-shadow: none;
+}
+
+.list {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--size-12), var(--size-12))
+  );
+  gap: var(--size-3);
+  align-content: start;
+  grid-template-rows: max-content; /* Set max height to height of children */
+  justify-content: center;
+  padding: 0;
+}

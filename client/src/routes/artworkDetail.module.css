@@ -1,0 +1,103 @@
+.detailContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--size-4);
+  justify-content: center;
+}
+
+.detailContainer > .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+}
+
+.deleteButton,
+.editButton {
+  text-shadow: none;
+}
+
+button {
+  display: flex;
+  /* width: 100%; */
+  border-radius: 999px;
+  padding: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.editButton,
+deleteButton {
+  width: 100%;
+}
+
+.deleteButton {
+  background-color: var(--red-0);
+  color: var(--red-8);
+}
+
+.editButton {
+  background-color: rgba(245, 245, 245, 0.8);
+  text-shadow: none;
+  color: var(--stone-10);
+}
+
+.editButton:hover {
+  border: 2px solid #2d2d2d;
+  box-shadow: none;
+}
+
+.deleteButton:hover {
+  border: 2px solid var(--red-8);
+  box-shadow: none;
+}
+
+.artwork > article > div > div {
+  scale: 1;
+}
+
+.artwork > article > div {
+  height: auto;
+}
+
+.ownerInfo {
+  display: flex;
+  font-weight: 200 !important;
+  font-style: normal !important;
+  max-inline-size: none;
+}
+
+.ownerInfo {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: grid;
+  /* flex-direction: column; */
+  gap: var(--size-4);
+  align-items: center;
+  width: 100%;
+  grid-template-columns: auto;
+  align-items: stretch;
+}
+
+.bolditalic {
+  font-style: italic;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .detailContainer {
+    flex-direction: column;
+  }
+}

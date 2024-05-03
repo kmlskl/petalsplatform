@@ -1,0 +1,62 @@
+@import "open-props/style";
+/* normalize and buttons are optional */
+/* but nice for starting something new */
+@import "open-props/normalize";
+@import "open-props/buttons";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --container-size: 80rem;
+}
+
+body {
+  padding-top: var(--size-10);
+  font-family: ;
+}
+
+body:has(.animatehero) {
+  --animate: true;
+  padding-top: 70vh;
+}
+
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+main {
+  padding: var(--size-2) var(--size-4) 0 var(--size-4);
+  /* max-width: var(--container-size); */
+  /* margin: 0 auto; */
+}
+
+input {
+  padding: var(--size-relative-3);
+}
+
+a:has(article) {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
