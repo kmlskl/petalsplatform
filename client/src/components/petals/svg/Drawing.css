@@ -1,0 +1,105 @@
+.blur-container {
+  display: none;
+}
+
+.layer {
+  transform: rotate(0deg) translateZ(0);
+  animation: rotateLayer 0s linear infinite;
+
+}
+
+@media screen and (max-width: 480px) {
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      main {
+        view-timeline-name: --section;
+      }
+
+      .drawing-container {
+        position: relative;
+      }
+
+      .anim-wrapper {
+        position: fixed;
+        z-index: 99999;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%) translateZ(0);
+
+        animation-name: scroll-move;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-timeline: scroll(root);
+        animation-range-start: 0%;
+        animation-range-end: 30%;
+      }
+
+      .body-container {
+        view-timeline: --section;
+      }
+
+      @keyframes scroll-move {
+        0% {
+          top: 33%;
+          left: 50%;
+          scale: 1;
+        }
+        100% {
+          top: -4%;
+          left: 50%;
+          scale: 0.5;
+        }
+      }
+
+      @keyframes scroll-appear {
+        0% {
+          opacity: 0;
+          filter: blur(12px);
+        }
+        100% {
+          opacity: 1;
+          filter: blur(36px);
+        }
+      }
+
+      .blur-container {
+        display: block;
+        position: fixed;
+        top: -12%;
+        left: 0;
+        width: 100vw;
+        height: 20%;
+        filter: blur(12px);
+        background-color: rgba(255, 255, 255, 1);
+        scale: 1.6;
+        z-index: 120;
+        overflow: visible;
+
+        animation-name: scroll-appear;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-timeline: scroll(root);
+        animation-range-start: 0%;
+        animation-range-end: 30%;
+      }
+    }
+  }
+}
+
+@keyframes rotateLayer {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+
+@keyframes rotateLayerReverse {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotate(-360deg) translateZ(0);
+  }
+}
