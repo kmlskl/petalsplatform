@@ -5,7 +5,7 @@ const getUserById = async (id) => {
     endpoint: `users/${id}`,
     query: { populate: ["artworks"] },
   });
-  console.log("user", user);
+  // console.log("user", user);
   return user;
 };
 

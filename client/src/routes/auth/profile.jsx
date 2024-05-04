@@ -56,7 +56,7 @@ const Profile = () => {
         <h3>My artworks</h3>
         <ul className={` ${styles.list} `}>
           {artworks.map((artwork) => {
-            console.log(artwork.id, artwork.layers); // Add console log per artwork
+            // console.log(artwork.id, artwork.layers); // Add console log per artwork
             return (
               <li key={artwork.id}>
                 <Link to={`/artwork/${artwork.id}`}>

@@ -88,33 +88,3 @@ export const getMe = async () => {
 export const removeAuthData = () => {
   localStorage.removeItem(AUTH_DATA);
 };
-
-export const changePassword = async (currentPassword, newPassword) => {
-  let response;
-  try {
-    response = await fetch(
-      `${import.meta.env.VITE_STRAPI_URL}/api/auth/local/password-change`,
-      {
-        method: "POST",
-        body: JSON.stringify({ currentPassword, newPassword }),
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${getToken()}`,
-        },
-      }
-    );
-  } catch (error) {
-    console.log("Change Password response error", error.response);
-    throw error;
-  }
-
-  const data = await response.json();
-  if (data.error) {
-    throw data.error;
-  }
-
-  // Optionally update the stored auth data if needed
-  setAuthData(data);
-
-  return data;
-};

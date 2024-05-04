@@ -11,7 +11,7 @@ const User = () => {
   const { user } = useLoaderData();
 
   const artworks = user.artworks;
-  console.log("user", user);
+  // console.log("user", user);
 
   return (
     <>

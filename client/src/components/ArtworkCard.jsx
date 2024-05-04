@@ -7,7 +7,7 @@ const ArtworkCard = ({ artworkId, layers, globals, owner }) => {
   // console.log("layers", layers);
   const viewBoxSize = 500;
   const location = useLocation();
-  console.log(artworkId);
+  // console.log(artworkId);
 
   return (
     <article className={styles.card}>

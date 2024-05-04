@@ -18,7 +18,7 @@ import Login from "./routes/auth/login";
 import CreateArtworkFrom from "./routes/createArtworkFrom";
 import Profile from "./routes/auth/profile";
 import Register from "./routes/auth/register";
-import ChangePassword from "./routes/auth/changePassword";
+// import ChangePassword from "./routes/auth/changePassword";
 // import ChangeEmail from "./routes/auth/changeEmail";
 // import ChangeUsername from "./routes/auth/changeUsername";
 import User from "./routes/user";
@@ -62,12 +62,12 @@ const router = createBrowserRouter([
         action: Login.action,
         loader: Login.loader,
       },
-      {
-        path: "/auth/changePassword",
-        element: <ChangePassword />,
-        action: ChangePassword.action,
-        loader: ChangePassword.loader,
-      },
+      // {
+      //   path: "/auth/changePassword",
+      //   element: <ChangePassword />,
+      //   action: ChangePassword.action,
+      //   loader: ChangePassword.loader,
+      // },
       // {
       //   path: "/auth/changeEmail",
       //   element: <ChangeEmail />,

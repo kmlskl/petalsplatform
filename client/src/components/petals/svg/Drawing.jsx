@@ -10,7 +10,7 @@ const Drawing = ({
   updateGlobals,
   viewBoxSize,
 }) => {
-  console.log(artworkId);
+  // console.log(artworkId);
   // svg object
   return (
     <svg
